@@ -44,7 +44,7 @@ def result():
 
     item = request.form['item']
     url_f    = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term='
-    url_b    = '&retmax=1000&retmode=json'
+    url_b    = '&retmax=500&retmode=json'
     url      = url_f + item + url_b
     get_url  = requests.get(url)
     get_json = get_url.json()
